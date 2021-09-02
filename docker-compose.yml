@@ -1,0 +1,13 @@
+version: '3.6'
+services:
+  app:
+    container_name: word_frequency
+    build: .
+    volumes:
+      - .:/go/src
+    networks:
+      - word_frequency
+networks:
+  word_frequency:
+    name: word_frequency_word_frequency
+    driver: bridge
